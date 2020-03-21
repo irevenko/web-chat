@@ -1,4 +1,4 @@
-# ArtichokeChat <img src="/front-end/images/artichoke-logo.png" width="30" height="30">
+# ArtichokeChat <img src="/front-end/images/artichoke.ico" height="50" width="50">
 A simple green themed web chat made to learn Node.js and Network Programming, MongoDB
 
 # Technologies 🧾
