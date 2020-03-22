@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Artichoke Chat</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" type="image/x-icon" href="images/artichoke.ico" />
 </head>
 
@@ -38,6 +38,14 @@
       </div>
     </div>
   </nav>
+  <div id="artichoke-chat">
+    <div id="chat-window">
+      <div id="display"></div>
+    </div>
+    <input id="user-name" class="input is-success" type="text" placeholder="Username">
+    <input id="message-text" class="input is-success" type="text" placeholder="Message">
+    <button id="send-button" class="button is-success">Send</button>
+  </div>
   <script src="chat.js"></script>
   <script src="index.js"></script>
 </body>
