@@ -11,7 +11,12 @@ app.use(express.static('front-end'));
 const io = socket(server);
 io.on('connection', (socket) => {
     console.log('The socket is connected!\nSocket id:', socket.id);
+
     socket.on('chat', (data) => {
-        io.emit('chat', data)
+        io.emit('chat', data);
+    });
+
+    socket.on('is_typing', (data) => {
+        socket.broadcast.emit('is_typing', data);
     });
 });

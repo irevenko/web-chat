@@ -2,52 +2,53 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Artichoke Chat</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" type="image/x-icon" href="images/artichoke.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Artichoke Chat</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/artichoke.ico" />
 </head>
 
 <body>
-  <nav class="navbar is-success" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <img src="images/artichoke-logo.png" alt="Artichoke-Logo" width="110" height="110">
-      <p class="navbar-item" id="p-title">Artichoke Chat</p>
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="https://www.google.com/search?client=firefox-b-d&q=artichoke" target="_blank"> Home </a>
-        <a class="navbar-item" href="file:///home/irevenko/Documents/ArtichokeChat/front-end/index.html"> Documentation </a>
-      </div>
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-light" href="https://github.com/irevenko/ArtichokeChat" target="_blank">
-              <strong>Github</strong>
+    <nav class="navbar is-success" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <img src="images/artichoke-logo.png" alt="Artichoke-Logo" width="110" height="110">
+            <h1 class="navbar-item" id="h1-title">Artichoke Chat</h1>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </a>
-          </div>
         </div>
-      </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a id="home" class="navbar-item" href="https://www.google.com/search?client=firefox-b-d&q=artichoke" target="_blank"> Home </a>
+                <a id="docs" class="navbar-item" href="file:///home/irevenko/Documents/ArtichokeChat/front-end/index.html"> Documentation </a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-light" href="https://github.com/irevenko/ArtichokeChat" target="_blank">
+                            <strong>Github</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="artichoke-chat">
+        <div id="chat-window">
+            <div id="display-message"></div>
+            <div id="indicator"></div>
+        </div>
+        <input id="user-name" class="input is-success" type="text" placeholder="Username">
+        <input id="message-text" class="input is-success" type="text" placeholder="Message">
+        <button id="send-button" class="button is-success">Send</button>
     </div>
-  </nav>
-  <div id="artichoke-chat">
-    <div id="chat-window">
-      <div id="display"></div>
-    </div>
-    <input id="user-name" class="input is-success" type="text" placeholder="Username">
-    <input id="message-text" class="input is-success" type="text" placeholder="Message">
-    <button id="send-button" class="button is-success">Send</button>
-  </div>
-  <script src="chat.js"></script>
-  <script src="index.js"></script>
+    <script src="chat.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
