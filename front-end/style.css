@@ -1,5 +1,5 @@
 #h1-title {
-    font-size: 200%;
+    font-size: 180%;
 }
 
 #artichoke-chat {
@@ -13,12 +13,12 @@
 #chat-window {
     height: 400px;
     overflow: auto;
-    background: #f9f9f9;
+    background: #f8f8f8;
 }
 
 #display-message p {
-    padding: 14px 0px;
-    margin: 0 20px;
+    padding: 10px 0px;
+    margin: 0 18px;
     border-bottom: 1px solid #e9e9e9;
     color: #555;
 }
@@ -53,9 +53,8 @@ input {
 
 #send-button {
     color: #fff;
-    font-size: 20px;
+    font-size: 19px;
     width: 100%;
-    border-radius: 0 0 2px 2px;
 }
 
 #docs {

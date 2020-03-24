@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {       //Make navbar working 
+document.addEventListener('DOMContentLoaded', () => { //Make navbar working 
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
     if ($navbarBurgers.length > 0) {
         $navbarBurgers.forEach(el => {
@@ -11,3 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {       //Make navbar workin
         });
     }
 });
+
+function submit() {
+    if (event.key === 'Enter') {
+        document.getElementById('send-button').click();
+    }
+}

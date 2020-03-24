@@ -1,4 +1,4 @@
-const socket = io.connect('http://localhost:4000');
+const socket = io.connect('http://localhost:3000');
 
 const message = document.getElementById('message-text');
 const user = document.getElementById('user-name');
@@ -20,9 +20,9 @@ message.addEventListener('keypress', () => {
 
 socket.on('chat', (data) => {
     indicator.innerHTML = '';
-    output.innerHTML += '<p><strong>' + data.user + '</strong>: ' + data.message + '</p>';
+    output.innerHTML += `<p><strong>${data.user}</strong>: ${data.message}</p>`;
 });
 
 socket.on('is_typing', (data) => {
-    indicator.innerHTML = '<p><u>' + data + ' is typing</u></p>';
-})
+    indicator.innerHTML = `<p><u>${data} is typing</u></p>`;
+});
