@@ -1,60 +1,71 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Artichoke Chat</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="chat.js" defer></script>
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/artichoke.ico" />
-</head>
-
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="navbar is-success" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <img src="images/artichoke-logo.png" alt="Artichoke-Logo" width="110" height="110">
-                <h1 class="navbar-item" id="h1-title">Artichoke Chat</h1>
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
+      <nav class="navbar is-success" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <img src="images/artichoke-logo.png" alt="Artichoke-Logo" width="110" height="110">
+          <h1 class="navbar-item" id="h1-title">Artichoke Chat</h1>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <p class="buttons">
+                  <a class="button is-normal" href="https://github.com/irevenko/ArtichokeChat" target="_blank">
+                  <span class="icon">
+                  <i class="fab fa-github"></i>
+                  </span>
+                  <span><strong>GitHub</strong></span>
+                  </a>
+              </div>
             </div>
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start">
-                    <a id="home" class="navbar-item" href="https://www.google.com/search?client=firefox-b-d&q=artichoke" target="_blank"> Home </a>
-                    <a id="docs" class="navbar-item" href="file:///home/irevenko/Documents/ArtichokeChat/front-end/index.html"> Documentation </a>
-                </div>
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a class="button is-light" href="https://github.com/irevenko/ArtichokeChat" target="_blank">
-                                <strong>Github</strong>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <section class="chat">
-            <div id="artichoke-chat">
-                <div id="chat-window">
-                    <div id="display-message"></div>
-                    <div id="indicator"></div>
-                </div>
-                <input id="user-name" class="input is-success" type="text" placeholder="Username" name="user">
-                <input id="message-text" class="input is-success" type="text" placeholder="Message" name="message" onkeydown="submit()">
-                <button id="send-button" class="button is-success">Send</button>
-            </div>
-        </section>
+      <section class="chat">
+        <div id="artichoke-chat">
+          <div id="chat-window">
+            <div id="display-message"></div>
+            <div id="indicator"></div>
+          </div>
+          <div class="control has-icons-left has-icons-right">
+            <input id="user-name" class="input is-success" type="text" placeholder="Username" name="user" maxlength="20">
+            <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+            </span>
+          </div>
+          <div class="control has-icons-left has-icons-right">
+            <input id="message-text" class="input is-success" type="text" placeholder="Message" name="message" onkeydown="submit()" maxlength="200">
+            <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+            </span>
+          </div>
+          <button id="send-button" class="button is-success is-fullwidth is-normal">Send</button>
+        </div>
+      </section>
     </main>
-</body>
-
+  </body>
 </html>
+

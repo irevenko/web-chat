@@ -1,16 +1,14 @@
 const express = require('express');
 const socket = require('socket.io');
+
 const app = express();
-const port = 3000;
+const PORT = 3000;
 const pid = process.pid;
 
-const server = app.listen(port, () => {
-    console.log(`Listening on port: ${port} \nPID: ${pid}`);
-});
-
+const server = app.listen(PORT, () => console.log(`Listening on port: ${PORT} \nPID: ${pid}`));
 app.use(express.static('front-end'));
-const io = socket(server);
 
+const io = socket(server);
 io.on('connection', (socket) => {
     console.log(`The socket is connected!\nSocket id: ${socket.id}`);
 

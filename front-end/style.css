@@ -3,17 +3,18 @@
 }
 
 #artichoke-chat {
-    max-width: 600px;
+    max-width: 500px;
     margin: 5px auto;
-    border: 1px solid #ddd;
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.05);
-    border-radius: 2px;
+    border: 1px solid #81db99;
+    box-shadow: 1px 1px 1px rgba(100, 100, 100, 0.05);
 }
 
 #chat-window {
-    height: 400px;
+    height: 430px;
+    word-wrap: break-word;
     overflow: auto;
-    background: #f8f8f8;
+    min-height: 100%;
+    background: #fbfbfb;
 }
 
 #display-message p {
@@ -33,34 +34,16 @@
     color: #32a852;
 }
 
-label {
-    box-sizing: border-box;
-    display: block;
-    padding: 10px 20px;
+#message-text {
+    background: #fbfbfb;
 }
 
-input {
-    padding: 10px 20px;
-    box-sizing: border-box;
-    background: #eee;
-    border: 0;
-    display: block;
-    width: 100%;
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    font-size: 16px;
+#user-name {
+    background: #fbfbfb;
 }
 
-#send-button {
-    color: #fff;
-    font-size: 19px;
-    width: 100%;
-}
-
-#docs {
-    font-size: larger;
-}
-
-#home {
-    font-size: larger;
+@media only screen and (max-width: 1000px) {
+    [class*="button"] {
+        width: 100%;
+    }
 }
