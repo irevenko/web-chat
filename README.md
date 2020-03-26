@@ -1,4 +1,4 @@
-# Artichoke Chat <img src="/front-end/images/artichoke.ico" height="50" width="50">
+# Artichoke Chat <img src="/public/images/artichoke.ico" height="50" width="50">
 A simple green themed web chat made to learn Node.js and Network Programming
 
 # Technologies 🧾
