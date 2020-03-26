@@ -7,6 +7,7 @@ const output = document.getElementById('display-message');
 const indicator = document.getElementById('indicator');
 const chatWindow = document.getElementById('chat-window');
 
+
 button.addEventListener('click', () => {
     socket.emit('chat', {
         message: message.value,

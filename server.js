@@ -1,12 +1,15 @@
 const express = require('express');
+const http = require('http');
+const path = require('path');
 const socket = require('socket.io');
 
 const app = express();
-const PORT = 3000;
+const server = http.createServer(app);
+const PORT = process.env.PORT || 3000;
 const pid = process.pid;
 
-const server = app.listen(PORT, () => console.log(`Listening on port: ${PORT} \nPID: ${pid}`));
-app.use(express.static('front-end'));
+app.use(express.static(path.join(__dirname, 'public')));
+server.listen(PORT, () => console.log(`Listening on port: ${PORT} \nPID: ${pid}`));
 
 const io = socket(server);
 io.on('connection', (socket) => {
