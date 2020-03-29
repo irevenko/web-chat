@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Artichoke Chat</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js" defer></script>
+    <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer></script>
     <script src="chat.js" defer></script>
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="images/artichoke.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/artichoke.ico"/>
   </head>
   <body>
     <header>
@@ -55,7 +55,7 @@
             </span>
           </div>
           <div class="control has-icons-left has-icons-right">
-            <input id="message-text" class="input is-success" type="text" placeholder="Message" name="message" onkeydown="submit()" maxlength="200">
+            <input data-emojiable="true" id="message-text" class="input is-success" type="text" placeholder="Message" name="message" onkeydown="submit()">
             <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
             </span>

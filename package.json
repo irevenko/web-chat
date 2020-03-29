@@ -13,7 +13,7 @@
     "keywords": [
         "chat",
         "socket.io",
-        "nodejs"
+        "express"
     ],
     "author": "Ilya Revenko <ilya.revenko17@gmail.com>",
     "license": "MIT",
@@ -23,9 +23,8 @@
     "homepage": "https://github.com/irevenko/ArtichokeChat#readme",
     "dependencies": {
         "express": "^4.17.1",
-        "moment": "^2.24.0",
         "socket.io": "^2.3.0"
-    },
+ },
     "devDependencies": {
         "nodemon": "^2.0.2"
     }

@@ -22,7 +22,7 @@ message.addEventListener('keypress', () => {
 
 socket.on('chat', (data) => {
     indicator.innerHTML = '';
-    output.innerHTML += `<p><strong>${data.user}</strong>: ${data.message}</p>`;
+    output.innerHTML += `<p><strong>${data.user}</strong> <em>at ${new Date().getHours()}:${new Date().getMinutes()}</em> : ${data.message}</p>`;
     chatWindow.scrollTop = chatWindow.scrollHeight;
 });
 
