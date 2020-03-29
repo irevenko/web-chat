@@ -8,10 +8,8 @@ A simple green themed web chat made to learn Node.js and Network Programming
 <a href="https://www.npmjs.com"><img src="https://www.drupal.org/files/project-images/Npm-logo.png" width="165" height="60">
 <a href="https://bulma.io/"><img src="https://bulma.io/images/bulma-logo.png" width="170"></a>
 
-</a>
-
 # Demo 🔜
-<img src="https://i.imgur.com/kGoMbGg.png" width="1000" >
+<img src="https://i.imgur.com/gKMYC34.jpg" width="1000" >
 
 # ToDo ✅
 * Actual Chat
