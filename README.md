@@ -9,7 +9,9 @@ A simple green themed web chat made to learn Node.js and Network Programming
 <a href="https://bulma.io/"><img src="https://bulma.io/images/bulma-logo.png" width="170"></a>
 
 # Demo 🔜
-<img src="https://i.imgur.com/gKMYC34.jpg" width="1000" >
+<img src="https://i.imgur.com/gKMYC34.jpg" width="1000" > <br />
+
+<img id="1"src="https://i.imgur.com/iZMFxuX.jpg" width="250"> <img src="https://i.imgur.com/75iDgO7.jpg" width="250">
 
 # ToDo ✅
 * Actual Chat
