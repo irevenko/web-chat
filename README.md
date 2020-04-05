@@ -2,13 +2,13 @@
 A simple green themed web chat made to learn Node.js and Network Programming
 
 # Technologies 🧾
-<a href="https://nodejs.org/en/"><img src="https://miro.medium.com/max/2560/1*etZwqGbLaNmByzwAUtXPIw.png" width="170" > </a>
-<a href="https://socket.io/"><img src="https://i.imgur.com/dcCIum7.png" width="170"></a>
-<a href="https://expressjs.com/"><img src="https://i.imgur.com/DninoCz.png" width="170"></a>
+<a href="https://nodejs.org/en/"><img src="https://habrastorage.org/webt/bs/ml/lo/bsmllozt2li3jmn_6ec8vy4krdq.png" width="170" > </a>
+<a href="https://socket.io/"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.programwitherik.com%2Fcontent%2Fimages%2F2017%2F01%2Fsocket-e1434850599985.png&f=1&nofb=1" width="170"></a>
+<a href="https://expressjs.com/"><img src="https://miro.medium.com/max/6668/1*XP-mZOrIqX7OsFInN2ngRQ.png" width="170"></a>
 <a href="https://www.npmjs.com"><img src="https://www.drupal.org/files/project-images/Npm-logo.png" width="165" height="60">
-<a href="https://bulma.io/"><img src="https://bulma.io/images/bulma-logo.png" width="170"></a>
+<a href="https://bulma.io/"><img src="https://ruko.s3.ap-southeast-1.amazonaws.com/rumahkomunitas.com/tulisan/100319104121_bulma-banner.png" width="170"></a>
 
-# Demo 🔜
+# Preview 🆒
 <img src="https://i.imgur.com/gKMYC34.jpg" width="1000" > <br />
 
 <img src="https://i.imgur.com/iZMFxuX.jpg" width="250"> <img src="https://i.imgur.com/75iDgO7.jpg" width="250">

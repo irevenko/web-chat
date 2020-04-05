@@ -24,7 +24,7 @@
     color: #555;
 }
 
-#indicator p {
+#typing-label p {
     color: #aaa;
     padding: 14px 0px;
     margin: 0 20px;
@@ -40,6 +40,11 @@
 
 #user-name {
     background: #fbfbfb;
+}
+
+#user-span { 
+    font-size: 30px;
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 1000px) {

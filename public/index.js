@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => { //Make navbar working
     }
 });
 
-function submit() {
+function sendOnEnter() {
     if (event.key === 'Enter') {
-        document.getElementById('send-button').click();
+        document.getElementById('send-message').click();
     }
 }

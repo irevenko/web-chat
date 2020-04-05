@@ -42,25 +42,25 @@
       </nav>
     </header>
     <main>
-      <section class="chat">
+    <section class="chat">
         <div id="artichoke-chat">
           <div id="chat-window">
             <div id="display-message"></div>
-            <div id="indicator"></div>
+            <div id="typing-label"></div>
           </div>
-          <div class="control has-icons-left has-icons-right">
+            <div class="control has-icons-left has-icons-right">
             <input id="user-name" class="input is-success" type="text" placeholder="Username" name="user" maxlength="20">
             <span class="icon is-small is-left">
             <i class="fas fa-user"></i>
             </span>
           </div>
           <div class="control has-icons-left has-icons-right">
-            <input data-emojiable="true" id="message-text" class="input is-success" type="text" placeholder="Message" name="message" onkeydown="submit()">
+            <input id="message-text" class="input is-success" type="text" placeholder="Message" name="message" onkeydown="sendOnEnter()">
             <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
             </span>
           </div>
-          <button id="send-button" class="button is-success is-fullwidth is-normal">Send</button>
+          <button id="send-message" class="button is-success is-fullwidth is-normal" type="submit">Send</button>
         </div>
       </section>
     </main>
