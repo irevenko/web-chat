@@ -17,3 +17,16 @@ function sendOnEnter() {
         document.getElementById('send-message').click();
     }
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    const button = document.querySelector('#emoji-button');
+    const picker = new EmojiButton();
+
+    picker.on('emoji', emoji => {
+      document.getElementById('message-text').value += emoji;
+    });
+
+    button.addEventListener('click', () => {
+      picker.togglePicker(button);
+    });
+});        

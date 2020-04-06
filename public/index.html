@@ -8,6 +8,7 @@
     <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer></script>
     <script src="chat.js" defer></script>
     <script src="index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@2.12.1/dist/index.min.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/artichoke.ico"/>
@@ -29,7 +30,7 @@
             <div class="navbar-item">
               <div class="buttons">
                 <p class="buttons">
-                  <a class="button is-normal" href="https://github.com/irevenko/ArtichokeChat" target="_blank">
+                  <a class="button is-medium github-btn" href="https://github.com/irevenko/ArtichokeChat" target="_blank">
                   <span class="icon">
                   <i class="fab fa-github"></i>
                   </span>
@@ -42,26 +43,27 @@
       </nav>
     </header>
     <main>
-    <section class="chat">
-        <div id="artichoke-chat">
-          <div id="chat-window">
-            <div id="display-message"></div>
-            <div id="typing-label"></div>
-          </div>
-            <div class="control has-icons-left has-icons-right">
-            <input id="user-name" class="input is-success" type="text" placeholder="Username" name="user" maxlength="20">
-            <span class="icon is-small is-left">
-            <i class="fas fa-user"></i>
-            </span>
-          </div>
-          <div class="control has-icons-left has-icons-right">
+      <section class="chat">
+        <div id="chat-window">
+          <div id="display-message"></div>
+          <div id="typing-label"></div>
+        </div>
+        <div class="control has-icons-left">
+          <input id="user-name" class="input is-success" type="text" placeholder="Username" name="user" maxlength="20">
+          <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+          </span>
+        </div>
+        <div class="control has-icons-left has-icons-right">
+          <div id="message-box">
             <input id="message-text" class="input is-success" type="text" placeholder="Message" name="message" onkeydown="sendOnEnter()">
             <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
             </span>
+            <button class="button is-normal is-success is-light" id="emoji-button">&#x1F603</button>     
           </div>
-          <button id="send-message" class="button is-success is-fullwidth is-normal" type="submit">Send</button>
         </div>
+        <button id="send-message" class="button is-success is-fullwidth is-normal" type="submit">Send</button>
       </section>
     </main>
   </body>

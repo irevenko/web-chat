@@ -1,9 +1,11 @@
 #h1-title {
-    font-size: 180%;
+    font-size: 200%;
 }
 
-#artichoke-chat {
-    max-width: 500px;
+.chat {
+    font-size: 108%;
+    max-width: 570px;
+    height: 500px;
     margin: 5px auto;
     border: 1px solid #81db99;
     box-shadow: 1px 1px 1px rgba(100, 100, 100, 0.05);
@@ -36,19 +38,30 @@
 
 #message-text {
     background: #fbfbfb;
+    flex: 1;
+    width: 100%;
 }
 
 #user-name {
     background: #fbfbfb;
 }
 
-#user-span { 
+#user-span {
     font-size: 30px;
     font-weight: bold;
+}
+
+#message-box {
+    display: flex;
+}
+
+#emoji-button {
+    height: 40px;
+    width: 40px;
 }
 
 @media only screen and (max-width: 1000px) {
     [class*="button"] {
         width: 100%;
-    }
+   }
 }
