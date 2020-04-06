@@ -11,9 +11,9 @@ A simple green themed web chat made to learn Node.js and Network Programming
 # Preview 🆒
 <img src="https://i.imgur.com/QJGqjLN.jpg" width=900> <br />
 
-<img src="https://i.imgur.com/KetoNdf.jpg" width="250"> 
-<img src="https://i.imgur.com/rBIcjmV.jpg" width="250">
-<img src="https://i.imgur.com/SKQAUp0.jpg" width="250"> 
+<img src="https://i.imgur.com/KetoNdf.jpg" width="230"><img src="https://i.imgur.com/rBIcjmV.jpg" width="230"><img src="https://i.imgur.com/SKQAUp0.jpg" width="230"> 
+
+
 
 # ToDo ✅
 * Actual Chat
