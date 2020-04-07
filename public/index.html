@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Artichoke Chat</title>
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@2.12.1/dist/index.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js" defer></script>
     <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer></script>
     <script src="chat.js" defer></script>
     <script src="index.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@2.12.1/dist/index.min.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/artichoke.ico"/>
@@ -43,20 +43,21 @@
       </nav>
     </header>
     <main>
-      <section class="chat">
+      <section id="chat">
         <div id="chat-window">
+        <span id="users-counter">Online: 0</span>
           <div id="display-message"></div>
           <div id="typing-label"></div>
         </div>
         <div class="control has-icons-left">
-          <input id="user-name" class="input is-success" type="text" placeholder="Username" name="user" maxlength="20">
+          <input id="username-input" class="input is-success" type="text" placeholder="Username" name="username" maxlength="20">
           <span class="icon is-small is-left">
           <i class="fas fa-user"></i>
           </span>
         </div>
         <div class="control has-icons-left has-icons-right">
           <div id="message-box">
-            <input id="message-text" class="input is-success" type="text" placeholder="Message" name="message" onkeydown="sendOnEnter()">
+            <input id="message-input" class="input is-success" type="text" placeholder="Message" name="message" onkeydown="sendOnEnter()">
             <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
             </span>

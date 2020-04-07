@@ -1,30 +1,38 @@
-const express = require('express');
-const http = require('http');
 const path = require('path');
-const socket = require('socket.io');
-
+const express = require('express');
 const app = express();
-const server = http.createServer(app);
+const server = require('http').Server(app);
+const socket = require('socket.io');
 const io = socket(server);
-const pid = process.pid;
-const PORT = process.env.PORT || 3000;
 
+const PID = process.pid;
+const PORT = process.env.PORT || 3000;
+let usersNum = 0; 
+
+server.listen(PORT, () => { 
+  console.log(`The server is Listening on http://localhost:${PORT} \nPID: ${PID}\n`);
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
-server.listen(PORT, () => console.log(`Listening on port: ${PORT} \nPID: ${pid}`));
 
 io.on('connection', (socket) => {
-    console.log(`The socket is connected!\nSocket id: ${socket.id}`);
+  console.log(`The socket is connected! Socket id: ${socket.id}`);
+  usersNum++;
+  io.emit('broadcast', `Online: ${usersNum}`);
 
-    socket.on('new-message', (data) => {
-        io.emit('new-message', data);
-    });
+  socket.on('new-message', (data) => {
+    io.emit('new-message', data);
+  });
 
-    socket.on('is-typing', (data) => {
-        socket.broadcast.emit('is-typing', data);
-    });
+  socket.on('is-typing', (data) => {
+    socket.broadcast.emit('is-typing', data);
+  });
+
+  socket.on('disconnect', (data) => {
+    usersNum--;
+    io.emit('broadcast', `Online: ${usersNum}`);
+  });
 
 });
 
-//TODO Online: 0 Users
-//TODO Send emojies maybe media
+//TODO Send media

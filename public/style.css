@@ -2,7 +2,7 @@
     font-size: 200%;
 }
 
-.chat {
+#chat {
     font-size: 108%;
     max-width: 570px;
     height: 500px;
@@ -58,6 +58,15 @@
 #emoji-button {
     height: 40px;
     width: 40px;
+}
+
+#users-counter { 
+    color: #32a852;
+    font-size: larger;
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
 }
 
 @media only screen and (max-width: 1000px) {
