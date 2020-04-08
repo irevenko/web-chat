@@ -61,12 +61,13 @@
 }
 
 #users-counter { 
-    color: #32a852;
-    font-size: larger;
-    font-weight: bold;
+    font-size: 18px;
     display: inline-block;
     width: 100%;
     text-align: center;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
 }
 
 @media only screen and (max-width: 1000px) {

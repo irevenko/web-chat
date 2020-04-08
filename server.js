@@ -9,10 +9,6 @@ const PID = process.pid;
 const PORT = process.env.PORT || 3000;
 let usersNum = 0; 
 
-server.listen(PORT, () => { 
-  console.log(`The server is Listening on http://localhost:${PORT} \nPID: ${PID}\n`);
-});
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 io.on('connection', (socket) => {
@@ -35,4 +31,7 @@ io.on('connection', (socket) => {
 
 });
 
+server.listen(PORT, () => { 
+  console.log(`The server is Listening on http://localhost:${PORT} \nPID: ${PID}\n`);
+});
 //TODO Send media
