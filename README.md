@@ -10,9 +10,9 @@ A simple green themed web chat made to learn Node.js and Network Programming
 
 # Preview 🔍
 <img src="https://i.imgur.com/1QsmHMG.jpg" width=1900> <br />
-<center>
-<img src="https://i.imgur.com/XWKiIr4.jpg" width="300"><img src="https://i.imgur.com/A2tWXH9.jpg" width="340">
-</center>
+
+<img src="https://i.imgur.com/XWKiIr4.jpg" width="290"><img src="https://i.imgur.com/A2tWXH9.jpg" width="300">
+
 
 # Quick Start 🚀
 ```got clone https://github.com/irevenko/artichoke-chat```<br>
