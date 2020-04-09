@@ -1,19 +1,33 @@
 const socket = io.connect('http://localhost:3000');
 
-const message = document.getElementById('message-input');
 const username = document.getElementById('username-input');
+const message = document.getElementById('message-input');
 const sendMsg = document.getElementById('send-message');
 const displayMsg = document.getElementById('display-message');
 const typingLabel = document.getElementById('typing-label');
 const chatWindow = document.getElementById('chat-window');
-const usersCounter = document.getElementById('users-counter')
+const usersCounter = document.getElementById('users-counter');
+const userErr = document.getElementById('username-error');
+const msgErr = document.getElementById('message-error');
 
-sendMsg.addEventListener('click', () => {
+
+sendMsg.addEventListener('click', () => { 
+  if (username.value === '' || username.value == null) {
+    userErr.innerHTML = '🚨Username is required!';
+    return;
+  }
+  if (message.value === '' || message.value == null) {
+    msgErr.innerHTML = '🚨Message is required!';
+    return;
+  }
+
   socket.emit('new-message', {
     message: message.value,
     username: username.value
   });
   message.value = '';
+  userErr.innerHTML = '';
+  msgErr.innerHTML = '';
 });
 
 message.addEventListener('keypress', () => {

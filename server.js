@@ -34,4 +34,3 @@ io.on('connection', (socket) => {
 server.listen(PORT, () => { 
   console.log(`The server is Listening on http://localhost:${PORT} \nPID: ${PID}\n`);
 });
-//TODO Send media

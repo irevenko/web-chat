@@ -32,6 +32,14 @@
     margin: 0 20px;
 }
 
+#username-error {
+    color: red;
+}
+
+#message-error {
+    color: red;
+}
+
 #display-message strong {
     color: #32a852;
 }
