@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => { //Make navbar working 
+document.addEventListener('DOMContentLoaded', function launchNavbar() { 
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
   if ($navbarBurgers.length > 0) {
     $navbarBurgers.forEach(el => {

@@ -41,7 +41,7 @@ socket.on('new-message', (data) => {
 });
 
 socket.on('is-typing', (data) => {
-  typingLabel.innerHTML = `<p><u>${data} is typing</u></p>`;
+  typingLabel.innerHTML = `<p>${data} is typing</p>`;
   chatWindow.scrollTop = chatWindow.scrollHeight;
 });
 

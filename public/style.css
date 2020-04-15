@@ -30,6 +30,7 @@
     color: #aaa;
     padding: 14px 0px;
     margin: 0 20px;
+    text-decoration: underline;
 }
 
 #username-error {
