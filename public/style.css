@@ -4,11 +4,12 @@
 
 #chat {
     font-size: 108%;
-    max-width: 570px;
-    height: 500px;
-    margin: 5px auto;
+    max-width: 580px;
+    height: 550px;
+    margin: 20px auto;
     border: 1px solid #81db99;
-    box-shadow: 1px 1px 1px rgba(100, 100, 100, 0.05);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
+    background: rgb(251, 251, 251);
 }
 
 #chat-window {
@@ -16,7 +17,8 @@
     word-wrap: break-word;
     overflow: auto;
     min-height: 100%;
-    background: #fbfbfb;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1); 
+    background: rgb(251, 251, 251);
 }
 
 #display-message p {
@@ -45,19 +47,16 @@
     color: #32a852;
 }
 
-#message-text {
-    background: #fbfbfb;
+#message-input {
     flex: 1;
     width: 100%;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
+    background: rgb(251, 251, 251);
 }
 
-#user-name {
-    background: #fbfbfb;
-}
-
-#user-span {
-    font-size: 30px;
-    font-weight: bold;
+#username-input { 
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
+    background: rgb(251, 251, 251);
 }
 
 #message-box {
@@ -67,6 +66,7 @@
 #emoji-button {
     height: 40px;
     width: 40px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
 }
 
 #users-counter { 
@@ -74,13 +74,21 @@
     display: inline-block;
     width: 100%;
     text-align: center;
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
+}
+
+#send-message { 
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.23); 
 }
 
 @media only screen and (max-width: 1000px) {
     [class*="button"] {
         width: 100%;
+   }
+  #chat { 
+       margin: 1px auto;
+       height: 460px;
    }
 }

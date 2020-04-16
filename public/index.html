@@ -34,7 +34,7 @@
                   <span class="icon">
                   <i class="fab fa-github"></i>
                   </span>
-                  <span><strong>GitHub</strong></span>
+                  <span><strong>Project's Code</strong></span>
                   </a>
               </div>
             </div>
@@ -51,7 +51,7 @@
         </div>
         <span id="username-error"></span>
         <div class="control has-icons-left">
-          <input id="username-input" class="input is-success" type="text" placeholder="Username" name="username" maxlength="20" autofocus>
+          <input id="username-input" class="input is-success" type="text" placeholder="Username" name="username" maxlength="20" autofocus autocomplete="off">
           <span class="icon is-small is-left">
           <i class="fas fa-user"></i>
           </span>
@@ -59,14 +59,14 @@
         <span id="message-error"></span>
         <div class="control has-icons-left has-icons-right">
           <div id="message-box">
-            <input id="message-input" class="input is-success" type="text" placeholder="Message" name="message" onkeydown="sendOnEnter()">
+            <input id="message-input" class="input is-success" type="text" placeholder="Message" name="message" onkeydown="sendOnEnter()" autocomplete="off">
             <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
             </span>
             <button class="button is-normal is-success is-light" id="emoji-button">&#x1F603</button>     
           </div>
         </div>
-        <button id="send-message" type="button"class="button is-success is-fullwidth is-normal">Send</button>   
+        <button id="send-message" class="button is-success is-fullwidth is-normal">Send</button>   
       </section>
     </main>
   </body>

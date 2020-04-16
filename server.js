@@ -24,7 +24,7 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('is-typing', data);
   });
 
-  socket.on('disconnect', (data) => {
+  socket.on('disconnect', () => {
     usersNum--;
     io.emit('broadcast', `Online: ${usersNum}`);
   });
