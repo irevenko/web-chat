@@ -7,7 +7,9 @@ const io = socket(server);
 
 const PID = process.pid;
 const PORT = process.env.PORT || 3000;
+const users = {};
 let usersNum = 0; 
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -15,6 +17,11 @@ io.on('connection', (socket) => {
   console.log(`The socket is connected! Socket id: ${socket.id}`);
   usersNum++;
   io.emit('broadcast', `Online: ${usersNum}`);
+
+  socket.on('new-user', (username) => {
+    users[socket.id] = username;
+    socket.broadcast.emit('user-connected', username);
+  })
 
   socket.on('new-message', (data) => {
     io.emit('new-message', data);
@@ -27,6 +34,8 @@ io.on('connection', (socket) => {
   socket.on('disconnect', () => {
     usersNum--;
     io.emit('broadcast', `Online: ${usersNum}`);
+    socket.broadcast.emit('user-disconnected', users[socket.id]);
+    delete users[socket.id];
   });
 
 });

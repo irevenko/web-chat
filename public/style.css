@@ -21,11 +21,32 @@
     background: rgb(251, 251, 251);
 }
 
+#users-counter { 
+    font-size: 18px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+#you-joined { 
+    padding: 10px 0px;
+    margin: 0 18px;
+    border-bottom: 1px solid #e9e9e9;
+    color: #555;  
+}
+
 #display-message p {
     padding: 10px 0px;
     margin: 0 18px;
     border-bottom: 1px solid #e9e9e9;
     color: #555;
+}
+
+#display-message strong {
+    color: #32a852;
 }
 
 #typing-label p {
@@ -35,26 +56,13 @@
     text-decoration: underline;
 }
 
-#username-error {
-    color: red;
-}
-
 #message-error {
     color: red;
-}
-
-#display-message strong {
-    color: #32a852;
 }
 
 #message-input {
     flex: 1;
     width: 100%;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
-    background: rgb(251, 251, 251);
-}
-
-#username-input { 
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
     background: rgb(251, 251, 251);
 }
@@ -67,16 +75,6 @@
     height: 40px;
     width: 40px;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
-}
-
-#users-counter { 
-    font-size: 18px;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
 }
 
 #send-message { 
