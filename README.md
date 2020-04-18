@@ -14,7 +14,7 @@ A simple green themed web chat made to learn Node.js and Network Programming
 <img src="https://i.imgur.com/XWKiIr4.jpg" width="290"><img src="https://i.imgur.com/A2tWXH9.jpg" width="300"> <img src="https://i.imgur.com/QEBg4vt.png" width="400">
 
 # Quick Start 🚀
-```got clone https://github.com/irevenko/artichoke-chat```<br>
+```git clone https://github.com/irevenko/artichoke-chat.git```<br>
 ```cd artichoke-chat```<br>
 ```npm install```<br>
 ```npm start  or  nodemon server.js```<br>

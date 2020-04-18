@@ -9,9 +9,18 @@ const usersCounter = document.getElementById('users-counter');
 const msgErr = document.getElementById('message-error');
 const join = document.getElementById('you-joined');
 
+
 const username = prompt('Enter your Username');
 join.innerHTML = '<p>You have joined the chat!<p>';
 socket.emit('new-user', username);
+
+socket.on('user-connected', (username) => {
+  appendMessage(`<p><strong>${username}</strong> has connected!</p>`);
+});
+
+socket.on('broadcast', (number) => { 
+  usersCounter.innerHTML = number;
+});
 
 socket.on('new-message', (data) => {
   typingLabel.innerHTML = '';
@@ -19,21 +28,13 @@ socket.on('new-message', (data) => {
   chatWindow.scrollTop = chatWindow.scrollHeight;
 });
 
-socket.on('user-connected', (username) => {
-  appendMessage(`<p><strong>${username}</strong> has connected!</p>`);
+socket.on('is-typing', (username) => {
+  typingLabel.innerHTML = `<p>${username} is typing</p>`;
+  chatWindow.scrollTop = chatWindow.scrollHeight;
 });
 
 socket.on('user-disconnected', (username) => {
   appendMessage(`<p><strong>${username}</strong> has disconnected!</p>`);
-});
-
-socket.on('is-typing', (data) => {
-  typingLabel.innerHTML = `<p>${data} is typing</p>`;
-  chatWindow.scrollTop = chatWindow.scrollHeight;
-});
-
-socket.on('broadcast', (data) => { 
-  usersCounter.innerHTML = data;
 });
 
 sendMsg.addEventListener('click', () => { 
@@ -55,7 +56,8 @@ message.addEventListener('keypress', () => {
 });
 
 function appendMessage(msgText) {
-  const msgElement = document.createElement('span')
-  msgElement.innerHTML = msgText
-  displayMsg.append(msgElement)
+  const msgElement = document.createElement('span');
+  msgElement.innerHTML = msgText;
+  displayMsg.append(msgElement);
+  chatWindow.scrollTop = chatWindow.scrollHeight;
 }

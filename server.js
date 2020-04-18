@@ -16,19 +16,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 io.on('connection', (socket) => {
   console.log(`The socket is connected! Socket id: ${socket.id}`);
   usersNum++;
-  io.emit('broadcast', `Online: ${usersNum}`);
 
   socket.on('new-user', (username) => {
+    io.emit('broadcast', `Online: ${usersNum}`);
     users[socket.id] = username;
     socket.broadcast.emit('user-connected', username);
-  })
+  });
 
   socket.on('new-message', (data) => {
     io.emit('new-message', data);
   });
 
-  socket.on('is-typing', (data) => {
-    socket.broadcast.emit('is-typing', data);
+  socket.on('is-typing', (username) => {
+    socket.broadcast.emit('is-typing', username);
   });
 
   socket.on('disconnect', () => {
