@@ -10,12 +10,19 @@ const msgErr = document.getElementById('message-error');
 const join = document.getElementById('you-joined');
 
 
-const username = prompt('Enter your Username');
-join.innerHTML = '<p>You have joined the chat!<p>';
-socket.emit('new-user', username);
+const username = prompt('Enter your Name');
+
+if (username === null || username.trim().length === 0) {
+  join.innerHTML = '<p>Please refresh the page and enter your Name properly!<p>';
+  throw new Error('Refresh the page and enter your Name');
+}
+else { 
+  join.innerHTML = '<p>You have joined the chat!<p>';
+  socket.emit('new-user', username);
+}
 
 socket.on('user-connected', (username) => {
-  appendMessage(`<p><strong>${username}</strong> has connected!</p>`);
+  displayMsg.innerHTML += `<p><strong>${username}</strong> has connected!</p>`;
 });
 
 socket.on('broadcast', (number) => { 
@@ -34,15 +41,20 @@ socket.on('is-typing', (username) => {
 });
 
 socket.on('user-disconnected', (username) => {
-  appendMessage(`<p><strong>${username}</strong> has disconnected!</p>`);
+  if (username == null) { 
+    displayMsg.innerHTML += `<p>Unloggined user has disconnected!</p>`;
+  }
+  else {
+    displayMsg.innerHTML += `<p><strong>${username}</strong> has disconnected!</p>`;
+  }
 });
 
 sendMsg.addEventListener('click', () => { 
-  if (message.value === '' || message.value == null) {
+  if (message.value === null || message.value.trim().length === 0) {
     msgErr.innerHTML = '🚨Message is required!';
     return;
   }
-
+  
   socket.emit('new-message', {
     message: message.value,
     username: username
@@ -54,10 +66,3 @@ sendMsg.addEventListener('click', () => {
 message.addEventListener('keypress', () => {
   socket.emit('is-typing', username);
 });
-
-function appendMessage(msgText) {
-  const msgElement = document.createElement('span');
-  msgElement.innerHTML = msgText;
-  displayMsg.append(msgElement);
-  chatWindow.scrollTop = chatWindow.scrollHeight;
-}

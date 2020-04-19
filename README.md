@@ -5,13 +5,14 @@ A simple green themed web chat made to learn Node.js and Network Programming
 <a href="https://nodejs.org/en/"><img src="https://habrastorage.org/webt/bs/ml/lo/bsmllozt2li3jmn_6ec8vy4krdq.png" width="170" > </a>
 <a href="https://socket.io/"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.programwitherik.com%2Fcontent%2Fimages%2F2017%2F01%2Fsocket-e1434850599985.png&f=1&nofb=1" width="170"></a>
 <a href="https://expressjs.com/"><img src="https://miro.medium.com/max/6668/1*XP-mZOrIqX7OsFInN2ngRQ.png" width="170"></a>
-<a href="https://www.npmjs.com"><img src="https://www.drupal.org/files/project-images/Npm-logo.png" width="165" height="60">
 <a href="https://bulma.io/"><img src="https://ruko.s3.ap-southeast-1.amazonaws.com/rumahkomunitas.com/tulisan/100319104121_bulma-banner.png" width="170"></a>
+<a href="https://www.npmjs.com"><img src="https://www.drupal.org/files/project-images/Npm-logo.png" width="165" height="60">
+
 
 # Preview 🔍
-<img src="https://i.imgur.com/1QsmHMG.jpg" width=1900> <br />
-
-<img src="https://i.imgur.com/XWKiIr4.jpg" width="290"><img src="https://i.imgur.com/A2tWXH9.jpg" width="300"> <img src="https://i.imgur.com/QEBg4vt.png" width="400">
+<img src="https://i.imgur.com/WIvnn2k.jpg" width=1900> <br />
+<img src="https://i.imgur.com/RHgmJCf.jpg" width=1900> <br /> 
+<img src="https://i.imgur.com/Qy8Sjxv.jpg" width="290"><img src="https://i.imgur.com/687nXhq.jpg" width="300"> <img src="https://i.imgur.com/ZJfQion.jpg" width="400">
 
 # Quick Start 🚀
 ```git clone https://github.com/irevenko/artichoke-chat.git```<br>
@@ -21,15 +22,14 @@ A simple green themed web chat made to learn Node.js and Network Programming
 ```go to localhost:3000```
 
 # What I Learned 🧠
-* Node.js basics (async programming, callbacks, anonymous and arrow functions, socket.io, server side stuff, imports, modules, express, http, path)
-* Sockets
+* Node.js basics (async programming, callbacks, anonymous and arrow functions, server side stuff, imports, modules, express, http, path, socket.io)
+* Web Sockets
 * HTTP/HTTPS
-* DOM manipulation, EventListeners
+* DOM manipulation, EventListeners, Forms
 * How to use CSS Framework (Bulma)
 * Simple media queries
 * npm basics
 * Gathering front-end and back-end together
-
 
 # License 📑 
 (c) 2020 Ilya Revenko. [MIT License](https://tldrlegal.com/license/mit-license)

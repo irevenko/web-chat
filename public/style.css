@@ -17,7 +17,7 @@
     word-wrap: break-word;
     overflow: auto;
     min-height: 100%;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1); 
+    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.1); 
     background: rgb(251, 251, 251);
 }
 
@@ -36,6 +36,8 @@
     margin: 0 18px;
     border-bottom: 1px solid #e9e9e9;
     color: #555;  
+    text-align: center;
+    font-weight: 600;
 }
 
 #display-message p {
