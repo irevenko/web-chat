@@ -6,12 +6,12 @@ A simple green themed web chat made to learn Node.js and Network Programming
 <a href="https://socket.io/"><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.programwitherik.com%2Fcontent%2Fimages%2F2017%2F01%2Fsocket-e1434850599985.png&f=1&nofb=1" width="170"></a>
 <a href="https://expressjs.com/"><img src="https://miro.medium.com/max/6668/1*XP-mZOrIqX7OsFInN2ngRQ.png" width="170"></a>
 <a href="https://bulma.io/"><img src="https://ruko.s3.ap-southeast-1.amazonaws.com/rumahkomunitas.com/tulisan/100319104121_bulma-banner.png" width="170"></a>
-<a href="https://www.npmjs.com"><img src="https://www.drupal.org/files/project-images/Npm-logo.png" width="165" height="60">
+<a href="https://www.npmjs.com"><img src="https://www.drupal.org/files/project-images/Npm-logo.png" width="165" height="60"></a>
 
 
 # Preview 🔍
-<img src="https://i.imgur.com/WIvnn2k.jpg" width=1900> <br />
-<img src="https://i.imgur.com/RHgmJCf.jpg" width=1900> <br /> 
+<img src="https://i.imgur.com/WIvnn2k.jpg"> <br />
+<img src="https://i.imgur.com/RHgmJCf.jpg"> <br /> 
 <img src="https://i.imgur.com/Qy8Sjxv.jpg" width="290"><img src="https://i.imgur.com/687nXhq.jpg" width="300"> <img src="https://i.imgur.com/ZJfQion.jpg" width="400">
 
 # Quick Start 🚀
