@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Artichoke Chat</title>
-    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@2.12.1/dist/index.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js" defer></script>
-    <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer></script>
+    <script src="https://use.fontawesome.com/0924484589.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.0.0/dist/index.min.js" defer></script>
     <script src="js/chat.js" defer></script>
     <script src="js/index.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
@@ -17,7 +17,7 @@
     <header>
       <nav class="navbar is-success" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <img src="images/artichoke-logo.png" alt="Artichoke-Logo" width="110" height="110">
+          <img id="logo-img" src="images/artichoke-logo.png" alt="Artichoke-Logo" width="110" height="110">
           <h1 class="navbar-item" id="h1-title">Artichoke Chat</h1>
           <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
           <span aria-hidden="true"></span>
@@ -30,12 +30,21 @@
             <div class="navbar-item">
               <div class="buttons">
                 <p class="buttons">
-                  <a class="button is-medium github-btn" href="https://github.com/irevenko/ArtichokeChat" target="_blank">
-                  <span class="icon">
-                  <i class="fab fa-github"></i>
-                  </span>
-                  <span><strong>Github Code</strong></span>
-                  </a>
+                <p id="sound-p"><i class="fa fa-volume-up fa-2x" aria-hidden="true"></i></p>
+                <div class="onoffswitch" id="onoffswitch">
+                  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="sound-control" checked>
+                  <label class="onoffswitch-label" for="sound-control">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+                <a class="button" id="theme-button">🌗 Theme</a>  
+                <a id="gh-button" class="button" href="https://github.com/irevenko/ArtichokeChat" target="_blank">
+                <span class="icon">
+                <i class="fa fa-github" aria-hidden="true"></i>
+                </span>
+                <span><strong>Github Code</strong></span>
+                </a>
               </div>
             </div>
           </div>
@@ -51,17 +60,18 @@
           <div id="typing-label"></div>
         </div>
         <span id="message-error"></span>
-        <div class="control has-icons-left has-icons-right">
+        <div class="control has-icons-left">
           <div id="message-box">
             <input id="message-input" class="input is-success" type="text" placeholder="Message" name="message" onkeydown="sendOnEnter()" autocomplete="off" autofocus>
             <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
+            <i class="fa fa-commenting" aria-hidden="true" id="message-icon"></i>
             </span>
             <button class="button is-normal is-success is-light" id="emoji-button">&#x1F603</button>     
           </div>
         </div>
         <button id="send-message" class="button is-success is-fullwidth is-normal">Send</button>   
       </section>
+      <audio id="notification-sound" src="effect.mp3"></audio>
     </main>
   </body>
 </html>

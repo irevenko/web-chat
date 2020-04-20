@@ -1,5 +1,6 @@
 # Artichoke Chat <img src="/public/images/artichoke.ico" height="50" width="50">
-A simple green themed web chat made to learn Node.js and Network Programming
+A simple green themed web chat made to learn Node.js and Network Programming<br>
+Deployed on Heroku https://arti-chat.herokuapp.com/
 
 # Technologies 🧾
 <a href="https://nodejs.org/en/"><img src="https://habrastorage.org/webt/bs/ml/lo/bsmllozt2li3jmn_6ec8vy4krdq.png" width="170" > </a>
@@ -10,9 +11,13 @@ A simple green themed web chat made to learn Node.js and Network Programming
 
 
 # Preview 🔍
-<img src="https://i.imgur.com/WIvnn2k.jpg"> <br />
-<img src="https://i.imgur.com/RHgmJCf.jpg"> <br /> 
-<img src="https://i.imgur.com/Qy8Sjxv.jpg" width="290"><img src="https://i.imgur.com/687nXhq.jpg" width="300"> <img src="https://i.imgur.com/ZJfQion.jpg" width="400">
+<img src="https://i.imgur.com/dCxX4Ds.jpg" width=1900> <br />
+<img src="https://i.imgur.com/NiK5u6R.jpg" width=1900> <br /> 
+<img src="https://i.imgur.com/QQvTaOj.jpg" width=1900> <br />
+<img src="https://i.imgur.com/Ynbd5kY.jpg" width="300"> 
+<img src="https://i.imgur.com/DHPIFt8.jpg" width="300">
+<img src="https://i.imgur.com/uFRPWsy.jpg" width="300"> <br/>
+<img src="https://i.imgur.com/J7le3tt.jpg">
 
 # Quick Start 🚀
 ```git clone https://github.com/irevenko/artichoke-chat.git```<br>
