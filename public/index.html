@@ -7,8 +7,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js" defer></script>
     <script src="https://use.fontawesome.com/0924484589.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.0.0/dist/index.min.js" defer></script>
-    <script src="js/chat.js" defer></script>
     <script src="js/index.js" defer></script>
+    <script src="js/chat.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/artichoke.ico"/>
@@ -52,6 +52,19 @@
       </nav>
     </header>
     <main>
+      <section id="login-page" class="section">
+        <div id="login-form" class="container">
+          <h1 class="title" id="login-label">Enter your name</h1>
+          <div class="control has-icons-left">
+            <input type="text" id="username-input" placeholder="Username"  class="input is-success is-medium is-fullwidth" type="text" name="username" onkeydown="loginOnEnter()" autofocus maxlength=20>
+            <span class="icon is-left">
+            <i class="fa fa-user" id="user-icon"></i>
+            </span>
+            <span id="username-error"></span>
+          </div>
+          <button class="button is-success is-medium is-fullwidth" id="send-username">Login</button>
+        </div>
+      </section>
       <section id="chat">
         <div id="chat-window">
           <span class="tag is-success is-light" id="users-counter">Online: 0</span>

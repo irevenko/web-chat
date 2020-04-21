@@ -2,24 +2,51 @@ const socket = io.connect('http://localhost:3000');
 
 const message = document.getElementById('message-input');
 const sendMsg = document.getElementById('send-message');
+const msgSound = document.getElementById('notification-sound');
+const user = document.getElementById('username-input')
+const sendUser = document.getElementById('send-username');
 const displayMsg = document.getElementById('display-message');
 const typingLabel = document.getElementById('typing-label');
 const chatWindow = document.getElementById('chat-window');
 const usersCounter = document.getElementById('users-counter');
 const msgErr = document.getElementById('message-error');
+const userErr = document.getElementById('username-error');
 const join = document.getElementById('you-joined');
-const msgSound = document.getElementById('notification-sound');
+const chat = document.getElementById('chat');
+const login = document.getElementById('login-page');
 
 
-const username = prompt('Enter your Name');
+sendUser.addEventListener('click', () => {
+  if (user.value === null || user.value.trim().length === 0) {
+    userErr.innerHTML = '🚨 Name is required!';
+    return;
+  }
 
-if (username === null || username.trim().length === 0) {
-  join.innerHTML = '<p>Please refresh the page and enter your Name properly!<p>';
-  throw new Error('Refresh the page and enter your Name');
-} else { 
+  userErr.innerHTML = '';
+  login.style.display = 'none';
+  chat.style.display = 'block';
   join.innerHTML = '<p>You have joined the chat!<p>';
-  socket.emit('new-user', username);
-}
+  socket.emit('new-user', user.value);
+});
+
+sendMsg.addEventListener('click', () => { 
+  if (message.value === null || message.value.trim().length === 0) {
+    msgErr.innerHTML = '🚨 Message is required!';
+    return;
+  }
+  
+  socket.emit('new-message', {
+    message: message.value,
+    username: user.value
+  });
+  message.value = '';
+  msgErr.innerHTML = '';
+});
+
+message.addEventListener('keypress', () => {
+  socket.emit('is-typing', user.value);
+});
+
 
 socket.on('user-connected', (username) => {
   displayMsg.innerHTML += `<p><strong>${username}</strong> has connected!</p>`;
@@ -52,22 +79,4 @@ socket.on('user-disconnected', (username) => {
     chatWindow.scrollTop = chatWindow.scrollHeight;
     msgSound.play();
   }
-});
-
-sendMsg.addEventListener('click', () => { 
-  if (message.value === null || message.value.trim().length === 0) {
-    msgErr.innerHTML = '🚨Message is required!';
-    return;
-  }
-  
-  socket.emit('new-message', {
-    message: message.value,
-    username: username
-  });
-  message.value = '';
-  msgErr.innerHTML = '';
-});
-
-message.addEventListener('keypress', () => {
-  socket.emit('is-typing', username);
 });

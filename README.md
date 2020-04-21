@@ -11,9 +11,10 @@ Deployed on Heroku https://arti-chat.herokuapp.com/
 
 
 # Preview 🔍
-<img src="https://i.imgur.com/dCxX4Ds.jpg" width=1900> <br />
+<img src="https://i.imgur.com/U26kp9W.jpg" width=1900> <br />
 <img src="https://i.imgur.com/NiK5u6R.jpg" width=1900> <br /> 
 <img src="https://i.imgur.com/QQvTaOj.jpg" width=1900> <br />
+<img src="https://i.imgur.com/hQNDXvF.jpg" width="300">
 <img src="https://i.imgur.com/Ynbd5kY.jpg" width="300"> 
 <img src="https://i.imgur.com/DHPIFt8.jpg" width="300">
 <img src="https://i.imgur.com/uFRPWsy.jpg" width="300"> <br/>

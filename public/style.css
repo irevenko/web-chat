@@ -83,8 +83,18 @@ body.dark {
    text-decoration: underline;
 }
 
-#message-error {
+#message-error,
+#username-error {
    color: red;
+}
+
+#username-error {
+   font-size: 130%;
+}
+
+#username-input {
+   background-color: var(--background-color);
+   color: var(--text-color);
 }
 
 #message-input {
@@ -110,35 +120,17 @@ body.dark {
    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.23);
 }
 
-@media only screen and (max-width: 1000px) {
-   #chat {
-      margin: 1px auto;
-      height: 440px;
-   }
-   #gh-button,
-   #theme-button {
-      width: 100%;
-      border: 1px solid #fff;
-   }
-   #onoffswitch {
-      width: 70%;
-      margin-bottom: 10px;
-   }
-   #sound-p {
-      margin-left: 15px;
-      color: #fff;
-   }
-   #navbarBasicExample {
-      background-color: var(--navbar-background);
-   }
-   #logo-img { 
-      width: 70px;
-      height: 70px;
-   }
-   #h1-title { 
-      font-size: 27px;
-   }
+#login-page {
+   margin-top: 200px;
+   text-align: center;
+}
 
+#login-label {
+   color: var(--text-color);
+}
+
+#login-form {
+   width: 40%;
 }
 
 #gh-button {
@@ -238,6 +230,46 @@ body.dark {
    font-size: 18px;
 }
 
-#message-icon {
+#message-icon,
+#user-icon {
    color: var(--text-color);
+}
+
+@media only screen and (max-width: 1000px) {
+   #chat {
+      margin: 1px auto;
+      height: 440px;
+   }
+   #login-form {
+      width: 100%;
+   }
+   #login-page {
+      margin-top: 35%;
+   }
+   #login-label {
+      display: inline-block;
+   }
+   #gh-button,
+   #theme-button {
+      width: 100%;
+      border: 1px solid #fff;
+   }
+   #onoffswitch {
+      width: 70%;
+      margin-bottom: 10px;
+   }
+   #sound-p {
+      margin-left: 15px;
+      color: #fff;
+   }
+   #navbarBasicExample {
+      background-color: var(--navbar-background);
+   }
+   #logo-img {
+      width: 80px;
+      height: 80px;
+   }
+   #h1-title {
+      font-size: 27px;
+   }
 }

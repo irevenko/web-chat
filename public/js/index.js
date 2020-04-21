@@ -1,3 +1,5 @@
+document.getElementById('chat').style.display = 'none';
+
 document.addEventListener('DOMContentLoaded', function launchNavbar() { 
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
   if ($navbarBurgers.length > 0) {
@@ -14,9 +16,8 @@ document.addEventListener('DOMContentLoaded', function launchNavbar() {
 
 
 window.addEventListener('DOMContentLoaded', () => {
-const button = document.querySelector('#emoji-button');
+const button = document.getElementById('emoji-button');
 const picker = new EmojiButton({theme: 'dark', autoHide: false, position: 'auto-start'});
-
   picker.on('emoji', emoji => {
     document.getElementById('message-input').value += emoji;
   }); 
@@ -34,7 +35,6 @@ document.querySelector('#theme-button').addEventListener('click', () => {
 
 const audioPlayer = document.getElementById('notification-sound');
 const switcher = document.getElementById('sound-control');
-
 switcher.addEventListener('click', () => {
   if (switcher.checked == false) {
     audioPlayer.muted = true;
@@ -47,5 +47,11 @@ switcher.addEventListener('click', () => {
 function sendOnEnter() {
   if (event.key === 'Enter') {
     document.getElementById('send-message').click();
+  }
+}
+
+function loginOnEnter() { 
+  if (event.key === 'Enter') {
+    document.getElementById('send-username').click();
   }
 }
