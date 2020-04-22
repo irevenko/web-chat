@@ -1,6 +1,7 @@
 # Artichoke Chat <img src="/public/images/artichoke.ico" height="50" width="50">
 A simple green themed web chat made to learn Node.js and Network Programming<br>
-Deployed on Heroku https://arti-chat.herokuapp.com/
+Deployed on Heroku https://arti-chat.herokuapp.com/ <br>
+Safari and IE are not supported!
 
 # Technologies 🧾
 <a href="https://nodejs.org/en/"><img src="https://habrastorage.org/webt/bs/ml/lo/bsmllozt2li3jmn_6ec8vy4krdq.png" width="170" > </a>
