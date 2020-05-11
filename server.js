@@ -1,20 +1,25 @@
+/* eslint-disable no-console */
+/* eslint-disable import/no-unresolved */
 const path = require('path');
 const express = require('express');
+
 const app = express();
 const server = require('http').Server(app);
 const socket = require('socket.io');
+
 const io = socket(server);
 
 const PID = process.pid;
 const PORT = process.env.PORT || 3000;
 const users = {};
-let usersNum = 0; 
+let usersNum = 0;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+// eslint-disable-next-line no-shadow
 io.on('connection', (socket) => {
   console.log(`The socket is connected! Socket id: ${socket.id}`);
-  usersNum++;
+  usersNum += 1;
 
   socket.on('new-user', (username) => {
     io.emit('broadcast', `Online: ${usersNum}`);
@@ -31,14 +36,13 @@ io.on('connection', (socket) => {
   });
 
   socket.on('disconnect', () => {
-    usersNum--;
+    usersNum -= 1;
     io.emit('broadcast', `Online: ${usersNum}`);
     socket.broadcast.emit('user-disconnected', users[socket.id]);
     delete users[socket.id];
   });
-
 });
 
-server.listen(PORT, () => { 
+server.listen(PORT, () => {
   console.log(`The server is Listening on http://localhost:${PORT} \nPID: ${PID}\n`);
 });
